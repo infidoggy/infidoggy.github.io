@@ -10,6 +10,7 @@ body {
     align-items: center; 
     display: flex; 
     /* flex-direction: row;  */
+    
     border-radius: 1.5em;
     position: sticky; 
     margin-left: auto;
