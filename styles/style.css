@@ -1,11 +1,11 @@
 body {
-    background-color: #453e55;
+    background-color: #2f2a3b;
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 #topBar {
     background-color: #7a608a; 
-    width: 600px; 
+    width: 650px; 
     height: 75px; 
     align-items: center; 
     display: flex; 
@@ -26,29 +26,9 @@ body {
 
 #content {
     background-color: #7a608a; 
-    width: 600px; 
+    width: 700px; 
     height: 100%; 
     align-items: flex-start; 
-    display: grid; 
-    /* flex-direction: row;  */
-    border-radius: 1.5em;
-    /* position:;  */
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    
-    /* top: 2.5%;  */
-    /* left: 2.5%; */
-    border-style: solid;
-    border-color: #372344;
-    border-width: 2px;
-}
-
-#info {
-    background-color: #7a608a; 
-    width: 600px; 
-    height: 100%; 
-    align-items: start; 
     display: grid; 
     /* flex-direction: row;  */
     border-radius: 1.5em;

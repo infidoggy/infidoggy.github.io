@@ -1,6 +1,6 @@
 let light = false;
 /*
-document.getElementById("turn_mode_light").onclick = (ev) => {
+document.getElementById("Theme").onclick = (ev) => {
     console.log(light);
     light = !light;
 
