@@ -925,7 +925,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "7";
+	app.meta.h["build"] = "8";
 	app.meta.h["company"] = "HaxeFlixel";
 	app.meta.h["file"] = "ludum-dare-jam-57";
 	app.meta.h["name"] = "ludum-dare-jam-57";
@@ -8498,7 +8498,7 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 		this.add(this.areaFlies = new flixel_group_FlxTypedGroup());
 		this.add(this.flies = new flixel_group_FlxTypedGroup());
 		this.tongue = new chameleon_Tongue();
-		this.tongue.setPosition(this.chameleon.x - this.chameleon.get_width() + 128,this.chameleon.y - this.chameleon.get_height() + 100);
+		this.tongue.setPosition(this.chameleon.x - this.chameleon.get_width() + 138,this.chameleon.y - this.chameleon.get_height() + 100);
 		this.add(this.tongue);
 		this.scoreTxt = new flixel_text_FlxText(null,null,null,"Score: 0",32);
 		this.scoreTxt.setFormat(flixel_system_FlxAssets.FONT_DEFAULT,32,null,"left",flixel_text_FlxTextBorderStyle.OUTLINE_FAST,-16777216);
@@ -76069,7 +76069,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 262568;
+	this.version = 2007;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
