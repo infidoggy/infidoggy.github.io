@@ -62,19 +62,37 @@
             </ul>
         </div>
 
-        <section id="content">
+        <section class="content">
 
-            <ul class="ul-basic">
+            <ul class="ul-basic" style="background-color: #514868; border-radius: 1.25em">
                 <iframe id="youtube_video" width="360" height="240" style="background-color: #574662; border-style: solid; border-radius: 1.25em" allowfullscreen>
                 </iframe> 
-                <a style="color: white; margin-left: 5px; margin-top: 5px"> Last video uploaded </a>
+                <!-- all the data is in scripts/script.js -->
+                <a id="youtube_vid_information"></a>
             </ul>
 
             <ul style="list-style-type:none; display: grid; margin-top: 2px; padding: 0%; margin-left: 5px">
                 <h1 style="color: white; margin-left: auto; margin-right: auto;">WELCOME TO MY WEBPAGE</h1>
 
-                <h3 style="color: white">Hello, I'm InfiDoggy, i'm a programmmer and an artist generic xd</h3>
+                <h3 style="color: white; width: 50%;">Hello, I'm InfiDoggy, i'm a programmmer and an artist generic xd <br /> I use this webpage as a mirror of my social medias</h3>
             </ul>
+
+        </section>
+
+        <!-- por el momento habra un juego en ejecucion. luego podras elegir que juegos jugar -->
+
+        <section class="content" id="game" style="width: 600px;"> 
+
+            <!-- <ul class="ul-basic">
+                <iframe id="youtube_video" width="360" height="240" style="background-color: #574662; border-style: solid; border-radius: 1.25em" allowfullscreen>
+                </iframe> 
+                <a style="color: white; margin-left: 5px; margin-top: 5px"> Last video uploaded </a>
+            </ul> -->
+
+            <ul style=" list-style-type:none; display: grid; margin-top: 2px; padding: 0%; margin-left: 5px">
+                <h1 style="color: white; margin-left: auto; margin-right: auto;">MY GAME (MORE SOON)</h1>
+                <iframe style="margin-left: auto; margin-right: auto; border-style: solid; border-radius: 1.25em; width: 100%;" src="chameleon/index.html" width="600" height="600" frameborder="0"></iframe>
+            </ul> 
 
         </section>
 
@@ -88,7 +106,20 @@
             <h1>I'm InfiDoggy</h1>
         </section> -->
 
-        <div style="height:15em"></div>
+        <div style="height:5em"></div>
+
+        <div id="bottomBar">
+            <ul class="ul-bottomBar">
+                <li id="Views_page">
+                    <a style="
+                        color: white;
+                        background-color: #514868;
+                        border-radius: 1.5; 
+                        font-size: 28px;
+                    ">Views: 0</a>
+                </li>
+            </ul>
+        </div>
 
     </body>
 </html>
