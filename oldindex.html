@@ -1,34 +1,136 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="es">
+    <!-- THE WEB SITE'S HEAD -->
     <head>
-		<title>InfiTsune's web</title>
+
+        <!-- TITLE -->
+		<title>
+            Infinite Doggy's web
+        </title>
+
+        <!-- <body style=""> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <meta charset="UTF-8">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/style.css">
-        <script src="script.js" defer></script>
+
+        <link rel="stylesheet" href="styles/old.css">
+        <script src="scripts/script.js" defer></script>
+
+        <link rel="icon" type="image/x-icon" href="InfiTsune pic.ico">
+
+        <!-- BG COLOR -->
+        <!-- <body style="background-color: #4c4361;">  -->
+        <!-- <body style="background-image: url('assets/img/gamebana.png');">  -->
+        <style>
+            body {
+                background-image: url('assets/img/bgicon.png');
+            }
+        </style>
+
 	</head>
+
     <body>
-        <div id="background" style="
-            background-color: #2e2535;
-            width: 100%; 
-            height: 100%; 
-            align-items: center; 
-            flex-direction: row;
-            position: fixed;
-            top: 0; 
-            left: 0;
-            ">
-            <div id="topbar_header" style="background-color: #7a608a; width: 95%; height: 75px; align-items: center; display: flex; flex-direction: row; position:fixed; top: 10px; left: 2.5%; border-radius: 0.5em;">
-                <ul style="list-style: none; display: flex; flex-direction: row; align-items: center; padding-left: 0;">
-                    <a id="bienvenidos" style="color: white; font-size: 32px; background-color: #5c446b; padding: 0.5em; border-radius: 0.5em;">Bienvenidos</a>
 
-                    <a id="youtube_btn" style="color: white; text-decoration: none; font-size: 32px; background-color: rgb(253, 47, 92); padding: 0.5em; border-radius: 0.5em;"
-                    href="https://www.youtube.com/@InfiTsune/" onmouseout="this.style.background='rgb(253, 47, 92)';" onmouseover="this.style.background='rgb(250, 100, 133)';">Youtube</a>
-            </div>
-
-	        <div id="bg2" style="background-color: #594466; width: 95%; height: 90%; align-items: first baseline; display: flex; flex-direction: row; position:fixed; top: 95px; left: 2.5%; border-radius: 0.5em;">
-                    <a id="new_vid_btn" style=" Left: 5px; top: 0px; color: white; text-decoration: none; font-size: 24px; background-color: rgb(253, 47, 92); padding: 8em; border-radius: 0.5em;"
-                    href="https://www.youtube.com/@InfiTsune/" onmouseout="this.style.background='rgb(253, 47, 92)';" onmouseover="this.style.background='rgb(250, 100, 133)';">New video</a>
-            </div>
-
+        <div id="topBar">
+            <ul class="ul-topBar">
+                <li class="Topbar-elemets" id="Home">
+                    <a id="Topbar-elemets-buttons" style="
+                        background-color: #514868;
+                        justify-content: center;
+                        float: left;
+                        display: flex;
+                    " href="index.html" onmouseout="this.style.background='#514868'" onmouseover="this.style.background='#81769c'">
+                        <img src="assets/img/logo.png" style="width: 40px; height: 40px; border-radius: 1.5em; /*margin-bottom: -15px;*/"> Home
+                    </a>
+                    <!-- <a href="index.html">
+                        <img src="assets/img/logo.png" style="width: 80px; height: 80px; border-radius: 1.5em; margin-right: 70px;" alt="index.html">
+                    </a> -->
+                </li>
+                <li class="Topbar-elemets" id="Youtube">
+                    <a id="Topbar-elemets-buttons" style="
+                        margin-left: 50px;
+                        background-color: #a72c51;
+                    " href="https://www.youtube.com/@InfiDoggy" onmouseout="this.style.background='#a72c51'" onmouseover="this.style.background='#e25580'">Youtube</a>
+                    <!-- <img src="assets/img/youtube.png" style="width: 80px; height: 52px; border-radius: 1.5em; margin-top: 10px; margin-bottom: auto; margin-left: 50px;" alt=""> -->
+                </li>
+                <li class="Topbar-elemets" id="Newgrounds">
+                    <a id="Topbar-elemets-buttons" style="
+                        background-color: #a85f52;
+                    " href="https://infitsunexd.newgrounds.com" onmouseout="this.style.background='#a85f52'" onmouseover="this.style.background='#dd8b7d'">NG</a>
+                    <!-- <img src="assets/img/newgrounds.png" style="width: 70px; height: 70px; border-radius: 1.5em; margin-left: 5px;" alt=""> -->
+                </li>
+                <li class="Topbar-elemets" id="Github">
+                    <!-- <a id="Topbar-elemets-buttons" style="
+                        background-color: #5a5c66;
+                    " href="https://github.com/infidoggy" onmouseout="this.style.background='#5a5c66'" onmouseover="this.style.background='#868996'">Github</a> -->
+                    <!-- <img src="assets/img/github.png" style="width: 60px; height: 60px; border-radius: 1.5em;" alt=""> -->
+                </li>
+            </ul>
         </div>
+
+        <section class="content">
+
+            <ul class="ul-basic" style="background-color: #514868; border-radius: 1.25em">
+                <iframe id="youtube_video" width="360" height="240" style="background-color: #574662; border-style: solid; border-radius: 1.25em" allowfullscreen>
+                </iframe> 
+                <!-- all the data is in scripts/script.js -->
+                <a id="youtube_vid_information"></a>
+            </ul>
+
+            <ul style="list-style-type:none; display: grid; margin-top: 2px; padding: 0%; margin-left: 5px">
+                <h1 style="color: white; margin-left: auto; margin-right: auto;">WELCOME TO MY WEBPAGE</h1>
+
+                <h3 style="color: white; width: 50%;">Hello, I'm InfiDoggy, i'm a programmmer and an artist generic xd <br /> I use this webpage as a mirror of my social medias</h3>
+            </ul>
+
+        </section>
+
+        <!-- por el momento habra un juego en ejecucion. luego podras elegir que juegos jugar -->
+
+        <section class="content" id="game" style="width: 600px;"> 
+
+            <!-- <ul class="ul-basic">
+                <iframe id="youtube_video" width="360" height="240" style="background-color: #574662; border-style: solid; border-radius: 1.25em" allowfullscreen>
+                </iframe> 
+                <a style="color: white; margin-left: 5px; margin-top: 5px"> Last video uploaded </a>
+            </ul> -->
+
+            <ul style=" list-style-type:none; display: grid; margin-top: 2px; padding: 0%; margin-left: 5px">
+                <h1 style="color: white; margin-left: auto; margin-right: auto;">MY GAME (MORE SOON)</h1>
+                <iframe style="margin-left: auto; margin-right: auto; border-style: solid; border-radius: 1.25em; width: 100%;" src="chameleon/index.html" width="600" height="600" frameborder="0"></iframe>
+            </ul> 
+
+        </section>
+
+        <!-- <section id="info">
+            <h2 style="color: white; margin: auto;">
+                WELCOME TO MY WEB PAGE
+            </h2>
+
+            <h1></h1>
+
+            <h1>I'm InfiDoggy</h1>
+        </section> -->
+
+        <div style="height:5em"></div>
+
+        <div id="bottomBar">
+            <ul class="ul-bottomBar">
+                <li id="Views_page">
+                    <a style="
+                        color: white;
+                        background-color: #514868;
+                        padding: 0.6em;
+                        border-radius: 1.5em;
+                        font-size: 28px;
+                    ">Views: 0</a>
+                </li>
+            </ul>
+        </div>
+
     </body>
 </html>
