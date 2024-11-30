@@ -1,6 +1,6 @@
 .content-basic
 {
-    background-image: url("/assets/img/bgicon.png");
+    /* background-image: url("/assets/img/bgicon.png"); */
     scroll-padding-left: 10px;
     overflow-y: auto;
 }
@@ -11,7 +11,7 @@
     border-style: solid;
     border-width: 2px;
 
-    background-color: #847b9b;
+    background-color: #847b9b85;
     background-blend-mode: soft-light;
     border-radius: 1.25em;
 
@@ -24,7 +24,7 @@
 
     /* scroll-margin: ; */
 
-    background-image: url("/assets/img/bgicon.png");
+    /* background-image: url("/assets/img/bgicon.png"); */
 
     position: relative;
     top: auto;
@@ -49,6 +49,29 @@
 
 /* Handle */
 .content-basic::-webkit-scrollbar-thumb 
+{
+    background: #443d4e;
+    border-radius: 1em;
+    border: black solid 0.1em;
+}
+
+.content-group::-webkit-scrollbar 
+{
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+.content-group::-webkit-scrollbar-track 
+{
+    background: #f1f1f1;
+    border-radius: 1em;
+    margin-block: 0.8em;
+    border: black solid 0.1em;
+}
+
+/* Handle */
+.content-group::-webkit-scrollbar-thumb 
 {
     background: #443d4e;
     border-radius: 1em;

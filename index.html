@@ -24,35 +24,53 @@
     <body>
         <!-- The site's content -->
         <nav class="content-basic" id="content">
-            <div class="content-div">
-                <ul class="content-group" id="media-content">
+            <div class="content-div" style="text-align: center;">
+                <ul class="content-group"
+                    style="
+                        background-color: #473950;
+                        width: 85%;
+                        line-height: 15px;
+                        border-radius: 1em;
+                        /* padding-left: fixed; */
+                        margin-left: auto;
+                        margin-right: auto;
+                    " 
+                id="media-content">
                     <iframe 
                         id="youtube_video" 
                         width="360" 
                         height="240" 
                         style="
-                            background-color: #574662; 
+                            /* background-color: #574662;  */
                             border-style: solid; 
-                            border-radius: 3em;
+                            background-color: #473950;
+                            border-radius: 3em; 
                         " allowfullscreen
                     ></iframe> 
                     <a id="youtube_vid_information"></a>
                 </ul>
-    
-                <ul class="content-group" id="my-information-group" style="color: white; user-select: none;">
-                    <!-- <h1> Hello I'm <span style="color: #251d2b;"> Infinite Doggy </span> </h1> <br> -->
-                    <h1 style="background-color: #574662; width: 250px; border-radius: 0.6em;" > Hello I'm <img id="my-signature" src="/assets/img/InfiDoggy.png" style="width: 120px;"> </h1> <br>
-                    <b style="position: relative; top: -34px;" > I use this web site as a mirror of all my social medias <br>
-                    BUT I also upload all my games for play or download them. </b>
-                </ul>
+
+                <div style="margin-left: auto; margin-right: auto; padding-top: ; width: 92%; background-color: #33283b; border-radius: 0.8em; list-style: none; color: rgb(186, 171, 203); user-select: none;">
+                    <h1 width="65px" style="color: rgb(255, 255, 255); margin-left: auto; margin-right: auto;"> Information </h1>
+
+                    <ul class="content-group" id="my-information-group" style="scroll-padding-left: 10px;overflow-y: auto;padding:15px; padding-top: 0; width: 70%; height: 120px; margin-left: auto; margin-right: auto; background-color: #473950; border-radius: 0.8em; list-style: none; color: rgb(186, 171, 203);">
+                        <!-- <h1> Hello I'm <span style="color: #251d2b;"> Infinite Doggy </span> </h1> <br> -->
+                        <h1 style="width: 55%;" > Hello I'm <img id="my-signature" src="/assets/img/InfiDoggy.png" style="margin-right: 95px; width: 90px;"> </h1> <br>
+                        <b style="background-color: #473950; position: relative; top: -34px;" > I use this web site as a mirror of all my social medias <br>
+                        BUT I also upload all my games for play or download them. </b>
+                    </ul>
+                </div>
+
+                <h1 style="color: rgb(25, 19, 32); margin-left: auto; margin-right: auto;"> Games </h1>
     
                 <ul class="content-group" id="games-group" style="user-select: none; list-style-type:none; display: grid; margin-top: 2px; padding: 0%; margin-left: 5px">
-                    <h1 style="color: white; margin-left: auto; margin-right: auto;"> Games </h1>
                     <iframe src="chameleon/index.html" style="
                         margin-left: auto; 
                         margin-right: auto; 
                         border-radius: 1.25em; 
-                    " frameborder="0" width="640" height="480"></iframe>
+                        border-style: solid;
+                        border-color: black;
+                    " width="640" height="480"></iframe>
                 </ul>
             </div>
         </nav>

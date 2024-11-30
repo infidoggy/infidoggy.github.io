@@ -1,9 +1,9 @@
-#nav-bar
+#nav-bar 
 {
     font-size: medium;
-    background-color: #847b9b;
-    background-image: url("/assets/img/bgicon.png");
-    background-blend-mode: soft-light;
+    background-color: #847b9b85;
+    /* background-image: url("/assets/img/bgicon.png"); */
+    /* background-blend-mode: soft-light; */
 
     height: calc(80% - 15px);
     /* width: 110px; */

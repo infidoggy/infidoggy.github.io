@@ -34,6 +34,9 @@ fetch("/scripts/socialLinks.json")
 
 var navBarButtons = document.getElementsByClassName("nav-bar-element");
 
+let speed = 1;
+let imageWidth = 100;
+
 let interval;
 
 for (let i = 0; i < navBarButtons.length; ++i)
@@ -79,49 +82,3 @@ if (document.getElementById("media-content") !== null)
     document.getElementById("youtube_vid_information").style.marginLeft = "5px";
     document.getElementById("youtube_vid_information").style.marginTop = "5px";
 }
-
-const body = document.body;
-const elements = document.getElementsByClassName("content-basic");
-
-var speed = 2;
-
-const imageWidth = 100;
-
-function BGAnimation()
-{
-    const bodyPositionXY = body.style.backgroundPositionX.replace("px", "");
-
-	let newBodyPos = bodyPositionXY - speed;
-
-	if (newBodyPos < -imageWidth) {
-		newBodyPos = 0;
-	}
-
-    body.style.backgroundPositionX = `${newBodyPos}px`;
-    body.style.backgroundPositionY = `${newBodyPos}px`;
-
-    // elements.item();
-
-    for (let i = 0; i < elements.length; ++i)
-    {
-        let element = elements.item(i);
-
-        const elementPositionXY = element.style.backgroundPositionX.replace("px", "");
-
-        let newElementPos = elementPositionXY - speed;
-
-        if (newElementPos < -imageWidth) {
-            newElementPos = 0;
-        }
-    
-        element.style.backgroundPositionX = `${newElementPos}px`;
-        element.style.backgroundPositionY = `${newElementPos}px`;
-    }
-
-    // body.style.backgroundAttachment = "fixed";
-
-	// Repite la animación
-	requestAnimationFrame(BGAnimation);
-}
-
-BGAnimation();
