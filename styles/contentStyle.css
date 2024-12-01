@@ -1,45 +1,52 @@
-.content-basic
+.all-contents
 {
-    /* background-image: url("/assets/img/bgicon.png"); */
-    scroll-padding-left: 10px;
-    overflow-y: auto;
-}
+    width: 40%;
+    height: 50%;
+    /* margin-bottom: auto; */
+    /* top: auto; */
 
-#content
-{
+    background-color: #6f5b7a;
+    opacity: 0.7;
+    border-radius: 1em;
     border-color: black;
     border-style: solid;
     border-width: 2px;
 
-    background-color: #847b9b85;
-    background-blend-mode: soft-light;
-    border-radius: 1.25em;
+    scroll-padding-left: 10px;
+    overflow-y: auto;
 
-    /* padding-right: 2em; */
-    margin-left: 50px;
-    /* box-sizing: border-box;  */
+    display: grid; 
+    list-style-type: none;
 
-    width: calc(55% - 15px);
-    height: 85%;
+    /* margin-left: auto;
+    margin-right: auto; */
 
-    /* scroll-margin: ; */
+    margin: auto;
+    padding: 0;
 
-    /* background-image: url("/assets/img/bgicon.png"); */
-
-    position: relative;
-    top: auto;
-
-    /* max-width: 550px; */
+    /* position: relative; */
+    /* top: auto; */
 }
 
-.content-basic::-webkit-scrollbar 
+#name-content
+{
+    font-family: 'falcon'; 
+    position: fixed; 
+    margin-top: -35px; 
+    color: white; 
+    background-color: rgb(59, 46, 72); 
+    border-radius: 0.2em; 
+    line-height: 190%;
+}
+
+.all-contents::-webkit-scrollbar 
 {
     width: 8px;
     height: 8px;
 }
 
 /* Track */
-.content-basic::-webkit-scrollbar-track 
+.all-contents::-webkit-scrollbar-track 
 {
     background: #f1f1f1;
     border-radius: 1em;
@@ -48,38 +55,45 @@
 }
 
 /* Handle */
-.content-basic::-webkit-scrollbar-thumb 
+.all-contents::-webkit-scrollbar-thumb 
 {
     background: #443d4e;
     border-radius: 1em;
     border: black solid 0.1em;
 }
 
-.content-group::-webkit-scrollbar 
+.content-media
 {
-    width: 8px;
-    height: 8px;
-}
-
-/* Track */
-.content-group::-webkit-scrollbar-track 
-{
-    background: #f1f1f1;
+    background-color: #473950;
+    width: 85%;
+    line-height: 15px;
     border-radius: 1em;
-    margin-block: 0.8em;
-    border: black solid 0.1em;
-}
-
-/* Handle */
-.content-group::-webkit-scrollbar-thumb 
-{
-    background: #443d4e;
-    border-radius: 1em;
-    border: black solid 0.1em;
-}
-
-#media-content
-{
+    /* padding-left: fixed; */
+    margin-left: auto;
+    margin-right: auto;
     display: flex; 
     list-style-type:none;
+}
+
+#content
+{
+    margin-right: 0;
+    margin-left: -8px;
+    position: relative;
+    z-index: 1;
+    width: 80%;
+}
+
+.text-fixed 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#image-sel-child
+{
+    opacity: 0.7;
 }

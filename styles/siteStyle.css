@@ -1,10 +1,5 @@
 html, body
 {
-    font-family: "digifit", cursive;
-    letter-spacing: 0.1em;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    font-size: medium;
-
     margin: 0;
     padding: 0;
 
@@ -17,15 +12,52 @@ html, body
     height: 100%;
 
     align-items: center; 
-    display: flex; 
+    /* display: flex;  */
+}
 
+* {
+    font-family: "pineapple", cursive;
+    /* letter-spacing: 0.15em; */
+    font-stretch: ultra-condensed;
+    line-height: 1.5;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: medium;
 }
 
 @font-face 
 {
     font-family: "digifit";
+    font-style: larger;
+    font-weight: 500;
+    /* font-variant-position: super; */
+    /* font-size: small; */
+    src: url('/fonts/DIGIFIT.ttf');
+}
+
+@font-face 
+{
+    font-family: "falcon";
+    font-style: normal;
+    font-weight: 100;
+    line-height: 24px;
+    /* font-size: small; */
+    src: url('/fonts/FALCON.TTF');
+}
+
+@font-face 
+{
+    font-family: "falcon";
     font-style: normal;
     font-weight: 100;
     /* font-size: small; */
     src: url('/fonts/FALCON.TTF');
+}
+
+@font-face 
+{
+    font-family: "pineapple";
+    font-style: normal;
+    font-weight: 100;
+    /* font-size: small; */
+    src: url('/fonts/Pineapple Days.otf');
 }
