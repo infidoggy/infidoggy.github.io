@@ -6,8 +6,4 @@ I use this website as a mirror of all my social medias.
 BUT I also upload some silly stuffs xd
 
 # Libraries
-* ## [npmjs](https://www.npmjs.com/)
-
-* ## [GSAP](https://gsap.com/)
-
-* ## [PixiJS](https://pixijs.com/)
+* [GSAP](https://gsap.com/)
