@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html>
 
     <!-- Site's head -->
     <head>
 
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=2.0">
 
         <title> 
             InfiSite :3 
@@ -15,30 +15,30 @@
         <link rel="icon" type="image/x-icon" href="/InfiTsune pic.ico">
 
         <audio id="sonic-ring" src="/assets/sounds/SonicRing.mp3"></audio>
+        <audio id="music" src="" ></audio>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
-        <script src="/scripts/script.js" defer></script>
-    
         <link rel="stylesheet" href="styles/siteStyle.css">
         <link rel="stylesheet" href="styles/contentStyle.css">
         <link rel="stylesheet" href="styles/navStyle.css">
+        <link rel="stylesheet" href="styles/musicPlayer.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
+        <script src="/scripts/coinsSystem.js" defer></script>
+        <script type="module" src="/scripts/script.js" defer></script>
 
     </head>
-
-    <style style="color: rgb(153, 130, 170);">
-        
-    </style>
 
     <!-- Site's body -->
     <body style="overflow: hidden; user-select: none;">
 
         <a id="rings" style="opacity: 0; color: yellow; position: absolute; left: calc(50vw); top: 25px;"> Rings: <span style="color: white;"> 0 </a>
         
-        <div style="display: flex; height: 100%;">
+        <div style="display: flex; height: 100%; margin-top: 50px;">
             
             <nav id="information" class="all-contents" style="position: relative; width: 50%; height: 80%; border-radius: 2em;">
 
-                <a id="name-content"> Information </a>
+                <a class="name-content"> Information </a>
 
                 <ul class="content-group"
                     style="
@@ -74,7 +74,7 @@
 
                 </ul>
 
-                <ul class="content-basic" id="content">
+                <ul class="content-basic" id="content" style="user-select: text;">
 
                     <a style="color: #2e2a34; position: absolute; top: -90px; left: 12px;">
                         <b style="position: relative; top: -20px;"> 
@@ -96,23 +96,98 @@
 
             </nav>
 
-            <nav id="extra" class="all-contents">
+            <nav id="art" class="all-contents" style="height: 70%;">
     
-                <a id="name-content"> Extra </a>
+                <a class="name-content-sel" id="tab-content-art"> Art </a>
+                <a class="name-content-sel" id="tab-content-music" style="margin-left: 50px;"> Music </a>
     
                 <ul class="content-basic" id="content" style="width: 100%; list-style-type:none; display: grid; margin: auto; padding: 0%;">
     
-                    <a style="margin: auto; color: white;"> 
+                    <a id="content-art-section" style="font-size: 32px; font-family: year; margin: auto; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black; 
+                        color: rgb(255, 255, 255); background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        -- Art --
+                    </a>
+
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
                         Reference 
                     </a>
                     <img draggable="false" oncontextmenu="return false;" id="image-ref" class="image-sel" 
-                        style="width: 70%;margin: auto; border-radius: 1em;" src="/assets/img/reference.png">
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/reference.png">
     
-                    <a style="margin: auto; color: white;"> 
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
                         Fish dev banner 
                     </a>
                     <img draggable="false" oncontextmenu="return false;" id="image-fish" class="image-sel" 
-                        style="width: 70%; margin: auto; border-radius: 1em;" src="/assets/img/Fish dibujo.png">
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/Fish dibujo.png">
+    
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Mi Cumple #15 
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-cumple" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/CUMPLE 15.png">
+
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Guitty and Bajory 
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-gnb" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/GUITTY AND BAJORY.png">
+    
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Guitty and Bajory boccet 
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-gnb-b" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/GUITTY AND BAJORY bocet.png">
+    
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Um Jammer Lammy
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-ujl" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/LAMMY DIBUJO completo.png">
+    
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Ovejas
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-sheeps" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/UN DIBUJO RANDOM.png">
+    
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        XRex M4ru pero es una maga
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-xrex-maga" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/XREX maga oscuro.png">
+    
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Zeineth
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-zeineth" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/zeineth.png">
+    
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Chameleon promotion
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="image-chameleon" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 1em;" src="/assets/img/art/chameleon.gif">
+    
+                    <div style="height:2em"></div>
+
+                    <a id="content-music-section" style="font-size: 32px; font-family: year; margin: auto; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: black; 
+                        color: rgb(255, 255, 255); background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        -- Music --
+                    </a>
+
+                    <div style="height:2em"></div>
+
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Music #1
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="music-dnb" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 100%;" src="/assets/img/CD.png">
+
+                    <a style="margin: auto; color: white; background-color: #6f5b7a;  z-index: 3;" class="images-title"> 
+                        Music #2
+                    </a>
+                    <img draggable="false" oncontextmenu="return false;" id="music-gfs" class="image-sel" 
+                        style="width: 50%; margin: auto; border-radius: 100%;" src="/assets/img/CD.png">
     
                     <div style="height:2em"></div>
     
@@ -122,8 +197,37 @@
 
         </div>
 
-        <img id="image" src="/assets/img/Fish dibujo.png" style="visibility: hidden; z-index: 4; position: fixed; width: fit-content; width: auto; height: 80vh;">
-        <div id="bg-image" style="visibility: hidden; z-index: 3; position: absolute; width: 100vw; height: 100vh; background-color: #000000; border: 1px solid #000000;">
+        <div id="music-player">
+            <ul id="music-player-bg">
+                <li id="music-player-name" class="music-element"> 
+                    Song name DHSKDJSKDJKSJDKSJ
+                </li>
+                <li id="music-bar-bg" class="music-element"></li>
+                <li id="music-bar" class="music-element"></li>
+                <li id="music-circle" class="music-element"></li>
+                <li id="music-bar-hitbox" class="music-element"></li>
+                <li id="music-player-time" class="music-element"> 
+                    0:00/0:00 
+                </li>
+                <li id="music-button-player-play" class="music-element"> 
+                    [Play] 
+                </li>
+                <li id="music-button-player-pause" class="music-element"> 
+                    [Pause] 
+                </li>
+                <li id="music-button-player-stop" class="music-element"> 
+                    [Stop] 
+                </li>
+                <li id="music-button-player-close" class="music-element"> 
+                    [X] 
+                </li>
+            </ul>
+        </div>
+
+        <img id="image" src="" style="visibility: hidden; z-index: 4; position: fixed; width: fit-content; width: auto; height: 80vh;">
+        <div id="bg-image" style="visibility: hidden; z-index: 3; position: absolute; width: 100vw; height: 100vh; background-color: #000000; opacity: 0.5;">
+
+        <!-- <div id="bg-image" style="visibility: hidden; z-index: 3; position: absolute; width: 100vw; height: 100vh; background-color: #000000; border: 1px solid #000000;"> -->
 
     </body>
 

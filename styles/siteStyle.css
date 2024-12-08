@@ -46,11 +46,20 @@ html, body
 
 @font-face 
 {
-    font-family: "falcon";
+    font-family: "year";
     font-style: normal;
     font-weight: 100;
     /* font-size: small; */
-    src: url('/fonts/FALCON.TTF');
+    src: url('/fonts/Year.otf');
+}
+
+@font-face 
+{
+    font-family: "pixelTwo";
+    font-style: normal;
+    font-weight: 100;
+    /* font-size: small; */
+    src: url('/fonts/PixdorTwo.ttf');
 }
 
 @font-face 
